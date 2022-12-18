@@ -3,8 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-ASP.NET_Project-5BFC7B50-493E-4BA9-B73D-860F2249C153</UserSecretsId>
-    <RootNamespace>ASP.NET_Project</RootNamespace>
+    <RootNamespace>ReadBook</RootNamespace>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <AssemblyName>ReadBook</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
