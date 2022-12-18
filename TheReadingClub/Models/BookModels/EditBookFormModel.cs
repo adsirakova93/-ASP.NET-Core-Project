@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using TheReadingClub.Models.AuthorModels;
-using TheReadingClub.Models.BookViewModels;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Models.AuthorModels;
+using TheBookClub.Models.BookViewModels;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Models.BookModels
+namespace TheBookClub.Models.BookModels
 {
     public class EditBookFormModel
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TheReadingClub.Services.BookServices;
+using TheBookClub.Services.BookServices;
 
-namespace TheReadingClub.Controllers
+namespace TheBookClub.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using TheReadingClub.Models.AuthorModels;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Models.AuthorModels;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Models.BookViewModels
+namespace TheBookClub.Models.BookViewModels
 {
     public class AddBookFormModel
     {

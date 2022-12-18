@@ -1,4 +1,4 @@
-﻿namespace TheReadingClub.Models.BookModels
+﻿namespace TheBookClub.Models.BookModels
 {
     public class IndexBookViewModel
     {

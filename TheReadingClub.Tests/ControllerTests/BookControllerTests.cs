@@ -1,14 +1,14 @@
 ﻿using Xunit;
 using MyTested.AspNetCore.Mvc;
-using TheReadingClub.Controllers;
-using static TheReadingClub.Tests.Data.Books;
-using static TheReadingClub.Tests.Data.Genres;
-using static TheReadingClub.Tests.Data.Authors;
-using TheReadingClub.Models.BookViewModels;
+using TheBookClub.Controllers;
+using static TheBookClub.Tests.Data.Books;
+using static TheBookClub.Tests.Data.Genres;
+using static TheBookClub.Tests.Data.Authors;
+using TheBookClub.Models.BookViewModels;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace TheReadingClub.Tests.ControllerTests
+namespace TheBookClub.Tests.ControllerTests
 {
     public class BookControllerTests
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TheReadingClub.Models.AuthorModels
+namespace TheBookClub.Models.AuthorModels
 {
     public class AuthorBookViewModel
     {

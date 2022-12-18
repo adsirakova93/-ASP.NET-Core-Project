@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TheReadingClub.Data.DBModels;
+using TheBookClub.Data.DBModels;
 
-namespace TheReadingClub.Tests.Data
+namespace TheBookClub.Tests.Data
 {
     public static class Books
     {

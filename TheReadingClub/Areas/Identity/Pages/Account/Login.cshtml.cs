@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using TheReadingClub.Data.DBModels;
+using TheBookClub.Data.DBModels;
 
-namespace TheReadingClub.Areas.Identity.Pages.Account
+namespace TheBookClub.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class LoginModel : PageModel

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static TheReadingClub.ProjectConstants;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Models.AuthorModels
+namespace TheBookClub.Models.AuthorModels
 {
     public class EditAuthorFormModel
     {

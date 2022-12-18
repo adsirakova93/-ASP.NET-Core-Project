@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TheReadingClub.Data.DBModels
+namespace TheBookClub.Data.DBModels
 {
     public class Story
     {

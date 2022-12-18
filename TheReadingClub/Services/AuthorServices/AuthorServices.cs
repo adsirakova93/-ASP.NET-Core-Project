@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TheReadingClub.Data;
-using TheReadingClub.Models.AuthorModels;
-using TheReadingClub.Models.AuthorViewModels;
+using TheBookClub.Data;
+using TheBookClub.Models.AuthorModels;
+using TheBookClub.Models.AuthorViewModels;
 
-namespace TheReadingClub.Services.FormModelServices
+namespace TheBookClub.Services.FormModelServices
 {
     public class AuthorServices : IAuthorServices
     {
-        private readonly TheReadingClubDbContext data;
+        private readonly TheBookClubDbContext data;
 
-        public AuthorServices(TheReadingClubDbContext data)
+        public AuthorServices(TheBookClubDbContext data)
         {
             this.data = data;
         }

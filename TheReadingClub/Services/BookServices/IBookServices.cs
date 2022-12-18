@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.BookModels;
-using TheReadingClub.Models.BookViewModels;
+using TheBookClub.Models.BookModels;
+using TheBookClub.Models.BookViewModels;
 
-namespace TheReadingClub.Services.BookServices
+namespace TheBookClub.Services.BookServices
 {
     public interface IBookServices
     {

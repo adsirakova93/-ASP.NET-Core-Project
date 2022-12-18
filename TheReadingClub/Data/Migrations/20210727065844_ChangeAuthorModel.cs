@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TheReadingClub.Data.Migrations
+namespace TheBookClub.Data.Migrations
 {
     public partial class ChangeAuthorModel : Migration
     {

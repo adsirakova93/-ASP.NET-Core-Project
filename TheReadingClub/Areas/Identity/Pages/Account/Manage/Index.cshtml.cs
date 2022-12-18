@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using TheReadingClub.Data.DBModels;
+using TheBookClub.Data.DBModels;
 
-namespace TheReadingClub.Areas.Identity.Pages.Account.Manage
+namespace TheBookClub.Areas.Identity.Pages.Account.Manage
 {
     public partial class IndexModel : PageModel
     {

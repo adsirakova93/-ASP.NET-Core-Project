@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace TheReadingClub
+namespace TheBookClub
 {
     public class Program
     {

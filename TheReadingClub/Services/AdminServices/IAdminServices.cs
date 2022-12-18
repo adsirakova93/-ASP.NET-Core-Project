@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.AdminModels;
+using TheBookClub.Models.AdminModels;
 
-namespace TheReadingClub.Services.AdminServices
+namespace TheBookClub.Services.AdminServices
 {
     public interface IAdminServices
     {

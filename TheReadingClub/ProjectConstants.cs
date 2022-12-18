@@ -1,4 +1,4 @@
-﻿namespace TheReadingClub
+﻿namespace TheBookClub
 {
     public class ProjectConstants
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TheReadingClub.Services.GenreServices;
+using TheBookClub.Services.GenreServices;
 
-namespace TheReadingClub.Controllers
+namespace TheBookClub.Controllers
 {
     public class GenreController : Controller
     {

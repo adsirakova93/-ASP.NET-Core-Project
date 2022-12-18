@@ -1,4 +1,4 @@
-﻿namespace TheReadingClub.Models.ModeratorModels
+﻿namespace TheBookClub.Models.ModeratorModels
 {
     public class AuthorsApprovalViewModel
     {

@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TheReadingClub.Data;
-using TheReadingClub.Data.DBModels;
-using TheReadingClub.Services.AdminServices;
-using TheReadingClub.Services.BookServices;
-using TheReadingClub.Services.DBSeeder;
-using TheReadingClub.Services.FormModelServices;
-using TheReadingClub.Services.GenreServices;
-using TheReadingClub.Services.ModeratorServices;
+using TheBookClub.Data;
+using TheBookClub.Data.DBModels;
+using TheBookClub.Services.AdminServices;
+using TheBookClub.Services.BookServices;
+using TheBookClub.Services.DBSeeder;
+using TheBookClub.Services.FormModelServices;
+using TheBookClub.Services.GenreServices;
+using TheBookClub.Services.ModeratorServices;
 
-namespace TheReadingClub
+namespace TheBookClub
 {
     public class Startup
     {
@@ -28,7 +28,7 @@ namespace TheReadingClub
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TheReadingClubDbContext>(options =>
+            services.AddDbContext<TheBookClubDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
@@ -45,7 +45,7 @@ namespace TheReadingClub
                     options.SignIn.RequireConfirmedEmail = false;
                 })
                 .AddRoles<IdentityRole>()
-                .AddEntityFrameworkStores<TheReadingClubDbContext>();
+                .AddEntityFrameworkStores<TheBookClubDbContext>();
 
             services.AddControllersWithViews(options =>
             {

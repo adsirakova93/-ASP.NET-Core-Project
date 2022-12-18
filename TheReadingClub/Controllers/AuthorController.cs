@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TheReadingClub.Models.AuthorModels;
-using TheReadingClub.Models.AuthorViewModels;
-using TheReadingClub.Services.FormModelServices;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Models.AuthorModels;
+using TheBookClub.Models.AuthorViewModels;
+using TheBookClub.Services.FormModelServices;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Controllers
+namespace TheBookClub.Controllers
 {
     public class AuthorController : Controller
     {

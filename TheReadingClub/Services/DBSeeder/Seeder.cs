@@ -5,11 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TheReadingClub.Data;
-using TheReadingClub.Data.DBModels;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Data;
+using TheBookClub.Data.DBModels;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Services.DBSeeder
+namespace TheBookClub.Services.DBSeeder
 {
     public static class Seeder
     {
@@ -17,7 +17,7 @@ namespace TheReadingClub.Services.DBSeeder
         {
             using var serviceScope = app.ApplicationServices.CreateScope();
             var services = serviceScope.ServiceProvider;
-            var data = services.GetRequiredService<TheReadingClubDbContext>();
+            var data = services.GetRequiredService<TheBookClubDbContext>();
             var userManager = services.GetRequiredService<UserManager<User>>();
             var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
@@ -126,7 +126,7 @@ namespace TheReadingClub.Services.DBSeeder
             return authors;
         }
 
-        private static List<Book> AddBooksToDb(TheReadingClubDbContext data)
+        private static List<Book> AddBooksToDb(TheBookClubDbContext data)
         {
             var books = new List<Book>
             {

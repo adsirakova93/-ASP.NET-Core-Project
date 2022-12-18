@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using TheReadingClub.Data;
-using TheReadingClub.Models.BookModels;
-using TheReadingClub.Models.BookViewModels;
-using TheReadingClub.Models.GenreModels;
+using TheBookClub.Data;
+using TheBookClub.Models.BookModels;
+using TheBookClub.Models.BookViewModels;
+using TheBookClub.Models.GenreModels;
 
-namespace TheReadingClub.Services.GenreServices
+namespace TheBookClub.Services.GenreServices
 {
     public class GenreServices : IGenreServices
     {
-        private readonly TheReadingClubDbContext data;
+        private readonly TheBookClubDbContext data;
 
-        public GenreServices(TheReadingClubDbContext data)
+        public GenreServices(TheBookClubDbContext data)
         {
             this.data = data;
         }

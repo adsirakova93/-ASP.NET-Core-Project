@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TheReadingClub.Data;
+using TheBookClub.Data;
 
-namespace TheReadingClub.Data.Migrations
+namespace TheBookClub.Data.Migrations
 {
-    [DbContext(typeof(TheReadingClubDbContext))]
+    [DbContext(typeof(TheBookClubDbContext))]
     [Migration("20210809085905_EditBookPedingApproval")]
     partial class EditBookPedingApproval
     {
@@ -171,7 +171,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Author", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -192,7 +192,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.AuthorPendingApproval", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.AuthorPendingApproval", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -213,7 +213,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("AuthorPendingApprovals");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Book", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -247,7 +247,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.BookPendingApproval", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.BookPendingApproval", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -279,7 +279,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("BookPendingApprovals");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Genre", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -301,7 +301,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Story", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Story", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -324,7 +324,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Stories");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.User", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.User", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -398,13 +398,13 @@ namespace TheReadingClub.Data.Migrations
 
             modelBuilder.Entity("BookGenre", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.Book", null)
+                    b.HasOne("TheBookClub.Data.DBModels.Book", null)
                         .WithMany()
                         .HasForeignKey("BooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TheReadingClub.Data.DBModels.Genre", null)
+                    b.HasOne("TheBookClub.Data.DBModels.Genre", null)
                         .WithMany()
                         .HasForeignKey("GenresId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -422,7 +422,7 @@ namespace TheReadingClub.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.User", null)
+                    b.HasOne("TheBookClub.Data.DBModels.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -431,7 +431,7 @@ namespace TheReadingClub.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.User", null)
+                    b.HasOne("TheBookClub.Data.DBModels.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -446,7 +446,7 @@ namespace TheReadingClub.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TheReadingClub.Data.DBModels.User", null)
+                    b.HasOne("TheBookClub.Data.DBModels.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -455,16 +455,16 @@ namespace TheReadingClub.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.User", null)
+                    b.HasOne("TheBookClub.Data.DBModels.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Book", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Book", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.Author", "Author")
+                    b.HasOne("TheBookClub.Data.DBModels.Author", "Author")
                         .WithMany("Books")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -473,9 +473,9 @@ namespace TheReadingClub.Data.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.BookPendingApproval", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.BookPendingApproval", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.Author", "Author")
+                    b.HasOne("TheBookClub.Data.DBModels.Author", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -484,33 +484,33 @@ namespace TheReadingClub.Data.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Genre", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Genre", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.BookPendingApproval", null)
+                    b.HasOne("TheBookClub.Data.DBModels.BookPendingApproval", null)
                         .WithMany("Genres")
                         .HasForeignKey("BookPendingApprovalId");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Story", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Story", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.User", "User")
+                    b.HasOne("TheBookClub.Data.DBModels.User", "User")
                         .WithMany("Stories")
                         .HasForeignKey("UserId1");
 
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Author", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Author", b =>
                 {
                     b.Navigation("Books");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.BookPendingApproval", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.BookPendingApproval", b =>
                 {
                     b.Navigation("Genres");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.User", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.User", b =>
                 {
                     b.Navigation("Stories");
                 });

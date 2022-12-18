@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TheReadingClub.Data.DBModels;
+using TheBookClub.Data.DBModels;
 
-namespace TheReadingClub.Data
+namespace TheBookClub.Data
 {
-    public class TheReadingClubDbContext : IdentityDbContext<User>
+    public class TheBookClubDbContext : IdentityDbContext<User>
     {
-        public TheReadingClubDbContext(DbContextOptions<TheReadingClubDbContext> options)
+        public TheBookClubDbContext(DbContextOptions<TheBookClubDbContext> options)
             : base(options)
         {
         }

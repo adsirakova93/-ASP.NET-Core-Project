@@ -1,21 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using TheReadingClub.Data;
-using TheReadingClub.Models.AuthorModels;
-using TheReadingClub.Models.BookModels;
-using TheReadingClub.Models.BookViewModels;
-using TheReadingClub.Services.BookServices;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Data;
+using TheBookClub.Models.AuthorModels;
+using TheBookClub.Models.BookModels;
+using TheBookClub.Models.BookViewModels;
+using TheBookClub.Services.BookServices;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Controllers
+namespace TheBookClub.Controllers
 {
     public class BookController : Controller
     {
         private readonly IBookServices bookServices;
-        private readonly TheReadingClubDbContext data;
+        private readonly TheBookClubDbContext data;
 
-        public BookController(IBookServices bookServices, TheReadingClubDbContext data)
+        public BookController(IBookServices bookServices, TheBookClubDbContext data)
         {
             this.bookServices = bookServices;
             this.data = data;

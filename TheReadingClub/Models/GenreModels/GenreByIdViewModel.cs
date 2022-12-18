@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.BookModels;
+using TheBookClub.Models.BookModels;
 
-namespace TheReadingClub.Models.GenreModels
+namespace TheBookClub.Models.GenreModels
 {
     public class GenreByIdViewModel
     {

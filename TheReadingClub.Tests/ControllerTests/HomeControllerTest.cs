@@ -1,11 +1,11 @@
 ﻿using Xunit;
 using MyTested.AspNetCore.Mvc;
-using TheReadingClub.Controllers;
-using TheReadingClub.Models.BookModels;
+using TheBookClub.Controllers;
+using TheBookClub.Models.BookModels;
 using System.Collections.Generic;
-using static TheReadingClub.Tests.Data.Books;
+using static TheBookClub.Tests.Data.Books;
 
-namespace TheReadingClub.Tests.ControllerTests
+namespace TheBookClub.Tests.ControllerTests
 {
     public class HomeControllerTest
     {

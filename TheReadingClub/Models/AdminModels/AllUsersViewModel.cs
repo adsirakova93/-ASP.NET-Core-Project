@@ -1,4 +1,4 @@
-﻿namespace TheReadingClub.Models.AdminModels
+﻿namespace TheBookClub.Models.AdminModels
 {
     public class AllUsersViewModel
     {

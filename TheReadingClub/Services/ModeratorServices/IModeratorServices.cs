@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.ModeratorModels;
+using TheBookClub.Models.ModeratorModels;
 
-namespace TheReadingClub.Services.ModeratorServices
+namespace TheBookClub.Services.ModeratorServices
 {
     public interface IModeratorServices
     {

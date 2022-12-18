@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TheReadingClub.Models.AdminModels;
-using TheReadingClub.Services.AdminServices;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Models.AdminModels;
+using TheBookClub.Services.AdminServices;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Areas.Admin.Controllers
+namespace TheBookClub.Areas.Admin.Controllers
 {
     [Area(AdminRole)]
     [Authorize(Roles = AdminRole)]

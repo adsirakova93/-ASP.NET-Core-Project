@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
-using TheReadingClub.Data;
+using TheBookClub.Data;
 
-namespace TheReadingClub.Data.Migrations
+namespace TheBookClub.Data.Migrations
 {
-    [DbContext(typeof(TheReadingClubDbContext))]
+    [DbContext(typeof(TheBookClubDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {

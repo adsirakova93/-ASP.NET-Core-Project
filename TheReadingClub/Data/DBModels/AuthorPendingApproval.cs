@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static TheReadingClub.ProjectConstants;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Data.DBModels
+namespace TheBookClub.Data.DBModels
 {
     public class AuthorPendingApproval
     {

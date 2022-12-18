@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.BookViewModels;
+using TheBookClub.Models.BookViewModels;
 
-namespace TheReadingClub.Models.ModeratorModels
+namespace TheBookClub.Models.ModeratorModels
 {
     public class BooksApprovalViewModel
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace TheReadingClub.Models.BookModels
+namespace TheBookClub.Models.BookModels
 {
     public class AllBooksViewModel
     {

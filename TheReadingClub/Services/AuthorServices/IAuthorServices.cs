@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using TheReadingClub.Models.AuthorModels;
-using TheReadingClub.Models.AuthorViewModels;
+using TheBookClub.Models.AuthorModels;
+using TheBookClub.Models.AuthorViewModels;
 
-namespace TheReadingClub.Services.FormModelServices
+namespace TheBookClub.Services.FormModelServices
 {
     public interface IAuthorServices
     {

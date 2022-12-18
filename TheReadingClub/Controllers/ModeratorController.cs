@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TheReadingClub.Services.ModeratorServices;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Services.ModeratorServices;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Controllers
+namespace TheBookClub.Controllers
 {
     [Authorize(Roles = AdminRole + ", "+ ModeratorRole)]
     public class ModeratorController : Controller

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TheReadingClub.Data;
+using TheBookClub.Data;
 
-namespace TheReadingClub.Data.Migrations
+namespace TheBookClub.Data.Migrations
 {
-    [DbContext(typeof(TheReadingClubDbContext))]
+    [DbContext(typeof(TheBookClubDbContext))]
     [Migration("20210714140334_AddedReleaseDateToBook")]
     partial class AddedReleaseDateToBook
     {
@@ -236,7 +236,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Author", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -267,7 +267,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Book", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -301,7 +301,7 @@ namespace TheReadingClub.Data.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Genre", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Genre", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -320,13 +320,13 @@ namespace TheReadingClub.Data.Migrations
 
             modelBuilder.Entity("BookGenre", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.Book", null)
+                    b.HasOne("TheBookClub.Data.DBModels.Book", null)
                         .WithMany()
                         .HasForeignKey("BooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("TheReadingClub.Data.DBModels.Genre", null)
+                    b.HasOne("TheBookClub.Data.DBModels.Genre", null)
                         .WithMany()
                         .HasForeignKey("GenresId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -384,9 +384,9 @@ namespace TheReadingClub.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Book", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Book", b =>
                 {
-                    b.HasOne("TheReadingClub.Data.DBModels.Author", "Autor")
+                    b.HasOne("TheBookClub.Data.DBModels.Author", "Autor")
                         .WithMany("Books")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -395,7 +395,7 @@ namespace TheReadingClub.Data.Migrations
                     b.Navigation("Autor");
                 });
 
-            modelBuilder.Entity("TheReadingClub.Data.DBModels.Author", b =>
+            modelBuilder.Entity("TheBookClub.Data.DBModels.Author", b =>
                 {
                     b.Navigation("Books");
                 });

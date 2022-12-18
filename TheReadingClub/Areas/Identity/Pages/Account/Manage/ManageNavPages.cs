@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace TheReadingClub.Areas.Identity.Pages.Account.Manage
+namespace TheBookClub.Areas.Identity.Pages.Account.Manage
 {
     public static class ManageNavPages
     {

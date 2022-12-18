@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static TheReadingClub.ProjectConstants;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Models.AuthorViewModels
+namespace TheBookClub.Models.AuthorViewModels
 {
     public class AddAuthorFormModel
     {

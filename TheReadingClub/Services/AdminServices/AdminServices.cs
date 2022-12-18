@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TheReadingClub.Data;
-using TheReadingClub.Data.DBModels;
-using TheReadingClub.Models.AdminModels;
-using static TheReadingClub.ProjectConstants;
+using TheBookClub.Data;
+using TheBookClub.Data.DBModels;
+using TheBookClub.Models.AdminModels;
+using static TheBookClub.ProjectConstants;
 
-namespace TheReadingClub.Services.AdminServices
+namespace TheBookClub.Services.AdminServices
 {
     public class AdminServices : IAdminServices
     {
-        private readonly TheReadingClubDbContext data;
+        private readonly TheBookClubDbContext data;
         private readonly UserManager<User> userManager;
 
         public AdminServices(
-            TheReadingClubDbContext data,
+            TheBookClubDbContext data,
             UserManager<User> userManager)
         {
             this.data = data;
