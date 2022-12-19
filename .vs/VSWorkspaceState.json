@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\ASP.NET-Project",
+    "\\ASP.NET-Project\\Areas",
+    "\\ASP.NET-Project\\Areas\\Identity",
+    "\\ASP.NET-Project\\Controllers",
+    "\\ASP.NET-Project\\Data",
+    "\\ASP.NET-Project\\Data\\DBModels",
+    "\\ASP.NET-Project\\Data\\Migrations",
+    "\\ASP.NET-Project\\wwwroot",
+    "\\ASP.NET-Project\\wwwroot\\css"
+  ],
+  "SelectedNode": "\\ASP.NET-Project\\Areas\\Identity\\IdentityHostingStartup.cs",
+  "PreviewInSolutionExplorer": false
+}
