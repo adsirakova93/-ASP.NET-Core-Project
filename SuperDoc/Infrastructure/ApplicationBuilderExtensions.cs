@@ -85,7 +85,7 @@ namespace SuperDoc.Infrastructure
             var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
             const string adminEmail = "admin@SuperDoc.com";
-            const string adminPassword = "123456";
+            const string adminPassword = "admin123456";
 
             if (userManager.Users.Any(u => u.UserName == adminEmail))
             {
@@ -274,14 +274,13 @@ namespace SuperDoc.Infrastructure
 
             data.Cities.AddRange(new[]
             {
-                new City { Name = "New York", CountryId = 6},
+                new City { Name = "Skopie", CountryId = 6},
                 new City { Name = "Sofia", CountryId = 1},
-                new City { Name = "Berlin", CountryId = 7},
-                new City { Name = "Paris", CountryId = 2},
-                new City { Name = "Buenos Aires", CountryId = 3},
-                new City { Name = "London", CountryId = 5},
-                new City { Name = "Edinburgh", CountryId = 5},
-                new City { Name = "Amsterdam", CountryId = 4}
+                new City { Name = "Moscow", CountryId = 7},
+                new City { Name = "Bucuresc", CountryId = 2},
+                new City { Name = "Athens", CountryId = 3}, 
+                new City { Name = "Belgrad", CountryId = 5},
+                new City { Name = "Instanbul", CountryId = 4}
             });
 
             data.SaveChanges();
