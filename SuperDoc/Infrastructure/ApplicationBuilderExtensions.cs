@@ -115,7 +115,7 @@ namespace SuperDoc.Infrastructure
 
             const string patientEmail = "patient@SuperDoc.com";
             const string patientPassword = "123456";
-            const string patientName = "John Smith";
+            const string patientName = "Ivan Ivanov";
             const string patientGender = "Male";
 
             if (userManager.Users.Any(u => u.UserName == patientEmail))
@@ -156,11 +156,11 @@ namespace SuperDoc.Infrastructure
 
             const string physicianEmail = "physician@SuperDoc.com";
             const string physicianPassword = "123456";
-            const string physicianName = "Jessica Morales";
+            const string physicianName = "Maria Petrova";
             const string physicianGender = "Female";
             const int examinationPrice = 60;
             const int specialityId = 3;
-            const string practicePermissionNumber = "JS123456";
+            const string practicePermissionNumber = "MP123456";
             const bool defaultBool = true;
 
             if (userManager.Users.Any(u => u.UserName == physicianEmail))
@@ -211,12 +211,12 @@ namespace SuperDoc.Infrastructure
                 return;
             }
 
-            const string name = "JesMor";
-            const string joiningCode = "JesMorClinic";
-            const string address = "27 Abbey Road";
-            const string description = "Best clinic in Buenos Aires";
-            const string city = "Buenos Aires";
-            const string country = "Argentina";
+            const string name = "Nadezhda MDC";
+            const string joiningCode = "Nadezhda Clinic";
+            const string address = "256 Vasil Levski bul.";
+            const string description = "Best clinic in Varna";
+            const string city = "Varna";
+            const string country = "Bulgaria";
             const int typeId = 2;
 
             int cityId = data.Cities.Where(c => c.Name == city).Select(c => c.Id).FirstOrDefault();
@@ -252,12 +252,12 @@ namespace SuperDoc.Infrastructure
             data.Countries.AddRange(new[]
             {
                 new Country { Name = "Bulgaria", Alpha3Code = "BGR"},
-                new Country { Name = "France", Alpha3Code = "FRA"},
-                new Country { Name = "Argentina", Alpha3Code = "ARG"},
-                new Country { Name = "Netherlands", Alpha3Code = "NLD"},
-                new Country { Name = "United Kingdom of Great Britain and Northern Ireland", Alpha3Code = "GBR"},
-                new Country { Name = "United States of America", Alpha3Code = "USA"},
-                new Country { Name = "Germany", Alpha3Code = "DEU"}
+                new Country { Name = "Romania", Alpha3Code = "RON"},
+                new Country { Name = "Greece", Alpha3Code = "GRE"},
+                new Country { Name = "Turkey", Alpha3Code = "TUR"},
+                new Country { Name = "Serbia", Alpha3Code = "SER"},
+                new Country { Name = "North Macedonia", Alpha3Code = "MAC"},
+                new Country { Name = "Russia", Alpha3Code = "RUS"}
             });
 
             data.SaveChanges();
