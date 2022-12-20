@@ -1,0 +1,10 @@
+﻿@model PatientFormModel
+
+@{ ViewData["Title"] = "Edit patient profile"; 
+}
+
+<partial name="_PatientFormPartial" model="@Model" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
