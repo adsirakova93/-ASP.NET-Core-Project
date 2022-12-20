@@ -85,7 +85,7 @@ namespace SuperDoc.Infrastructure
             var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 
             const string adminEmail = "admin@SuperDoc.com";
-            const string adminPassword = "admin123456";
+            const string adminPassword = "123456";
 
             if (userManager.Users.Any(u => u.UserName == adminEmail))
             {
