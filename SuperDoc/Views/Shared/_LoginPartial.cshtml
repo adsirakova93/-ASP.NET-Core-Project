@@ -1,0 +1,97 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SuperDoc.Services.Physicians
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@inject IPhysicianService Physicians
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var userId = User.GetId();
+        var userIsPhysician = User.IsPhysician();
+        var userIsPatient = User.IsPatient();
+        var userIsAdmin = User.IsAdmin();
+
+        @if (!userIsPhysician && !userIsPatient && !userIsAdmin)
+        {
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="btn btn-outline-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Become</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Physicians" asp-action="Become">Physician</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Patients" asp-action="Become">Patient</a>
+                    </div>
+                </div>
+            </li>
+        }
+        @if (!userIsAdmin && userIsPhysician)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Mine">Appointments</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="btn btn-outline-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Check & Edit</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Physicians" asp-action="Mine">Profile</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="MedicalCenters" asp-action="Mine">Medical Center</a>
+                    </div>
+                </div>
+            </li>
+        }
+        @if (!userIsAdmin && userIsPatient)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Appointments" asp-action="Mine">Appointments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Patients" asp-action="Edit">Profile</a>
+            </li>
+        }
+        @if (userIsAdmin)
+        {
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="btn btn-outline-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add New</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Specialities" asp-action="Add">Speciality</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="MedicalCenterTypes" asp-action="Add">Medical Center Type</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Cities" asp-action="Add">City</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Countries" asp-action="Add">Country</a>
+                    </div>
+                </div>
+            </li>
+        }
+        @if (userIsAdmin)
+        {
+            <li class="nav-item">
+                <div class="dropdown show">
+                    <a class="btn btn-outline-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administration</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="Physicians" asp-action="All">Physicians</a>
+                        <a class="nav-link text-dark" asp-area="Admin" asp-controller="MedicalCenters" asp-action="All">Medical Centers</a>
+                    </div>
+                </div>
+            </li>
+        }
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Account</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>
+

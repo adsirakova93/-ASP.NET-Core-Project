@@ -1,0 +1,64 @@
+﻿@model MedicalCenterFormModel
+
+<div class="container">
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8 col-sm-12 ">
+            <h2 class="heading-margin text-center">@ViewData["Title"]</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" class="form-control" placeholder="FirstHospital, DermaClinic and etc...">
+                    <span asp-validation-for="Name" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address"></label>
+                    <input asp-for="Address" class="form-control" placeholder="2 Fleet Street, ...">
+                    <span asp-validation-for="Address" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CityId"></label>
+                    <select asp-for="CityId" class="form-control">
+                        @foreach (var city in Model.Cities)
+                        {
+                            <option value="@city.Id"> @city.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CountryId"></label>
+                    <select asp-for="CountryId" class="form-control">
+                        @foreach (var country in Model.Countries)
+                        {
+                            <option value="@country.Id"> @country.Name</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description"></label>
+                    <textarea asp-for="Description" rows="3" class="form-control" placeholder="The hospital with the best specialists..."></textarea>
+                    <span asp-validation-for="Description" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="JoiningCode"></label>
+                    <input asp-for="JoiningCode" class="form-control" placeholder="Xx0!...">
+                    <span asp-validation-for="JoiningCode" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImageUrl"></label>
+                    <input asp-for="ImageUrl" class="form-control" placeholder="https://image...">
+                    <span asp-validation-for="ImageUrl" class="small text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TypeId"></label>
+                    <select asp-for="TypeId" class="form-control">
+                        @foreach (var type in Model.MedicalCenterTypes)
+                        {
+                            <option value="@type.Id"> @type.Name</option>
+                        }
+                    </select>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Save" />
+            </form>
+        </div>
+    </div>
+</div>
