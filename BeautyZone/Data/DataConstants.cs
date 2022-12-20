@@ -29,7 +29,7 @@
             public const int NameMaxLength = 30;
             public const string DefaultMaleImageUrl = "https://img.freepik.com/premium-photo/happy-successful-male-cosmetologist-background-beauty-office-portrait-man-beautician_154092-14504.jpg?w=1060";
             public const string DefaultFemaleImageUrl = "https://media.istockphoto.com/id/1280387272/photo/woman-cosmetologist-or-dermatologist-looking-at-camera-in-beauty-spa-salon-room.jpg?s=612x612&w=is&k=20&c=hdR5i0xQ0hx4ip8WrILUiHXFTGHz5jice6WljRieHvM=";
-            public const string GenderMale = "Male";
+            public const string GenderMale = "Female";
             public const int ExaminationPriceMinValue = 0;
             public const int ExaminationPriceMaxValue = 600;
             public const int PermissionPracticeMinLength = 8;

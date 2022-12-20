@@ -115,8 +115,8 @@ namespace BeautyZone.Infrastructure
 
             const string patientEmail = "patient@BeautyZone.com";
             const string patientPassword = "123456";
-            const string patientName = "John Smith";
-            const string patientGender = "Male";
+            const string patientName = "Maria Petrova";
+            const string patientGender = "Female";
 
             if (userManager.Users.Any(u => u.UserName == patientEmail))
             {
@@ -156,7 +156,7 @@ namespace BeautyZone.Infrastructure
 
             const string physicianEmail = "physician@BeautyZone.com";
             const string physicianPassword = "123456";
-            const string physicianName = "Jessica Morales";
+            const string physicianName = "Marina Kapitonova";
             const string physicianGender = "Female";
             const int examinationPrice = 60;
             const int specialityId = 3;
