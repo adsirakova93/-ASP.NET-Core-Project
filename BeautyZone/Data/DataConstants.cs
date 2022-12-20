@@ -20,15 +20,15 @@
             public const int JoiningCodeMaxLength = 12;
             public const int AdressNameMinLength = 7;
             public const int AddressNameMaxLength = 50;
-            public const string DefaultImageUrl = "https://ehrintelligence.com/images/site/article_headers/_normal/rural_hospital_access.jpg";
+            public const string DefaultImageUrl = "https://scontent.fsof8-1.fna.fbcdn.net/v/t39.30808-6/305207276_500645628727160_5532865874823203762_n.png?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=ccQ7EYXVnn4AX8ZUk3g&_nc_ht=scontent.fsof8-1.fna&oh=00_AfBlNuBu9hUjlpR3UimYOSvvk9jPX5q_22Ml6-rm6PvUoQ&oe=63A6CBB5";
         }
 
         public class Physician
         {
             public const int NameMinLength = 3;
             public const int NameMaxLength = 30;
-            public const string DefaultMaleImageUrl = "https://i.pinimg.com/736x/cc/9b/3b/cc9b3b4f000047d3830eb98c9c630ccc.jpg";
-            public const string DefaultFemaleImageUrl = "https://png.pngtree.com/png-vector/20190811/ourlarge/pngtree-doctor-superwoman-png-image_1690213.jpg";
+            public const string DefaultMaleImageUrl = "https://img.freepik.com/premium-photo/happy-successful-male-cosmetologist-background-beauty-office-portrait-man-beautician_154092-14504.jpg?w=1060";
+            public const string DefaultFemaleImageUrl = "https://media.istockphoto.com/id/1280387272/photo/woman-cosmetologist-or-dermatologist-looking-at-camera-in-beauty-spa-salon-room.jpg?s=612x612&w=is&k=20&c=hdR5i0xQ0hx4ip8WrILUiHXFTGHz5jice6WljRieHvM=";
             public const string GenderMale = "Male";
             public const int ExaminationPriceMinValue = 0;
             public const int ExaminationPriceMaxValue = 600;
